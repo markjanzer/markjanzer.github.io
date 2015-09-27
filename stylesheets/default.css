@@ -2,16 +2,37 @@
   border: 1px solid red;
 }
 
+body {
+  font-family: "lato", sans-serif;
+}
+
+.main-para {
+  margin: 5em 26em 2em 26em;
+}
+
+.footer {
+  margin: 0 10em 0 25em;
+  padding: 0 0 0 10em;
+}
+
+.link:active {
+  color: ;
+}
+
+.c-black { color: black; }
+.m-s { margin: 2em; }
+.m-xs { margin: 0 1em;}
+
 .d-i { display: inline; }
+.d-ib { display: inline-block; }
 
 .fl { float: left;}
 
-
-
-.ff-ss { font-family: sans-serif; }
-
+.fw-b { font-weight: bold; }
 .fz-xxl { font-size: 2.5em }
 .fz-l { font-size: 1.2em; }
+
+.p-lr5 { padding: 0 5em;}
 
 .ta-c { text-align: center; }
 
