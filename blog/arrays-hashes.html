@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link type="text/css" rel="stylesheet" href="../stylesheets/normalize.css">
+    <link type="text/css" rel="stylesheet" href="../stylesheets/default.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <link type="text/css" rel="stylesheet" href="../stylesheets/blog.css">
+    <meta charset="utf-8">
+    <title>Mark Janzer</title>
+</head>
+<body class="bgc c-black">
+  <header>
+    <h1 class="fz:xxl ta-c ff-ss">Mark Janzer</h1>
+    <ul class="ta-c m-s">
+      <li class="d-i fz-l p-lr5 fw-b"><a href="../index.html">Home</a></li>
+      <li class="d-i fz-l p-lr5 fw-b"><a href="index.html">Blog</a></li>
+      <li class="d-i fz-l p-lr5 fw-b"><a href="../bio.html">Bio</a></li>
+      <li class="d-i fz-l p-lr5 fw-b"><a href="../portfolio.html">Portfolio</a></li>
+    </ul>
+  </header>
+  <main class="m-25">
+	<a href="index.html"> Back To Blog </a>
+	<hr>
+  <h1>Arrays and Hashes</h1>
+	<h2>October 4th, 2015</h2>
+	 <p>Arrays and hashes are two of the more exciting objects in Ruby. They are both collections of other objects, stored within the array or hash, and paired to an index. These indexes are the keys to finding the values appropriate values in the array/hash. Both of these awesome objects are similar, but they each have their unique differences making them useful in different situations.</p>
+	 <p> Arrays are ordered lists of values, and by adding these values to the array, they are automatically assigned an index value, indicating their placement in the array.
+
+    <pre><code>
+    coolest_to_least = [“Me”, “The Rock”, 8, false, “food poisoning”]
+    </pre></code> </p>
+    <p>If I wanted to find the coolest thing in my array, I could ask for the first element by <code>coolest_to_least[0]</code>, and it would tell me that “Me” is the first thing in the cool list. I did not assign this index 0 to the value “Me,” but the index was automatically attached to the value as I defined the array. </p>
+    <p>Hashes are unordered collections of key value pairs. Unlike arrays (which keep track of order and automatically assign indexes), hashes require you to define your own indexes. This allows for lists with with more descriptive keys, and is useful in different situations.
+    <pre><code>
+    personal_info = {
+    firstName: “Mark”
+    lastName: “Janzer”
+    favoriteNumber: 8
+    SSN: “Hahahaha”
+    }
+    </pre></code></p>
+    <p>If I had put this information in an array, it would show up as such <code>[“Mark”, “Janzer”, 8, “Hahahaha”]</code> This information is seemingly meaningless and arbitrarily ordered. The hash makes more sense and instead of using a number such as [0] to call my first name, I can do <code>personal_info[firstName]</code>.</p>
+    <p>Arrays are useful ordered lists of information that don’t require unique tags, while hashes are useful for grouping of information that has unique labels and doesn’t require order.</p>
+
+  <hr>
+
+</body>
+</html>
