@@ -6,18 +6,31 @@ body {
   font-family: "lato", sans-serif;
 }
 
-.main-para {
-  margin: 5em 26em 2em 26em;
+.main-style {
+  position: relative;
+  width: 75%;
+  height: 50%;
+  margin: auto;
+  overflow: auto;
 }
 
-.footer {
-  margin: 0 10em 0 25em;
-  padding: 0 0 0 10em;
+.main-para {
+  position: absolute;
+  width: 40%;
+  height: 50%;
+  margin: auto;
+  overflow: auto;
+  top: 10%;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
+
 
 .link:active {
   color: ;
 }
+
 
 .blog-article {
   position: relative;
@@ -35,6 +48,7 @@ body {
 
 .bgc { color: #FFF5F5;}
 .c-black { color: black; }
+.m-a { margin: auto;}
 .m-s { margin: 2em; }
 .m-xs { margin: 0 1em; }
 .m-5fl { margin: 0 0 0 5em; }
@@ -50,11 +64,17 @@ body {
 .fz-xxl { font-size: 2.5em }
 .fz-l { font-size: 1.2em; }
 
+.l-3 { left: 3%;}
+
 .p-lr5 { padding: 0 5em;}
+
+.pos-r { position: relative;}
 
 .ta-c { text-align: center; }
 
 .w-l { width: 50em; }
+.w-33 { width: 33%;}
+.w-30 { width: 30%;}
 
 
 
