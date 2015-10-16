@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link type="text/css" rel="stylesheet" href="../stylesheets/normalize.css">
+    <link type="text/css" rel="stylesheet" href="../stylesheets/default.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <link type="text/css" rel="stylesheet" href="../stylesheets/blog.css">
+    <meta charset="utf-8">
+    <title>Mark Janzer</title>
+</head>
+<body class="bgc c-black">
+  <header>
+    <h1 class="fz:xxl ta-c ff-ss">Mark Janzer</h1>
+    <ul class="ta-c m-s">
+      <li class="d-i fz-l p-lr5 fw-b"><a href="../index.html">Home</a></li>
+      <li class="d-i fz-l p-lr5 fw-b"><a href="index.html">Blog</a></li>
+      <li class="d-i fz-l p-lr5 fw-b"><a href="../bio.html">Bio</a></li>
+      <li class="d-i fz-l p-lr5 fw-b"><a href="../portfolio.html">Portfolio</a></li>
+    </ul>
+  </header>
+  <main class="m-25">
+	<a href="index.html"> Back To Blog </a>
+	<hr>
+  <h1>The FancySodaMachine Class</h1>
+	<h2>October 16th, 2015</h2>
+	<p>Today we are going to make one of those fancy soda machines! We will have multiple authentic sodas and artificial flavors you can mix with the sodas. We'll also add in a little customization so you can create your own sodas and flavors. Without further ado, lets's dive in.</p>
+
+<p>First things first, we have to define the class, and initialize any instance variables. We only need to initialize the instance variables that are too complex for an attr to define (not a reader or writer method). So lets define our standard sodas and flavors.
+<pre><code>
+class FancySodaMachine
+  def initialize()
+    @sodas = ["Foca Fola", "Fepsi", "Fr. Fepper", "Frite", "Froot Beer"]
+    @flavors = ["Red", "Orange", "Yellow", "Purple", "No flavors"]
+  end
+</pre></code>
+
+And now I'm going to include the reader methods for incase the user wants to know what sodas or flavors are available.
+<pre><code>
+  attr_reader :sodas, :flavors
+</pre></code>
+</p>
+
+<p>
+Before we start with the big make_drink method to actually deliver our product, lets give the user the ability to add sodas and flavors
+<pre><code>
+  def add_sodas(str)
+    @sodas << str
+  end
+
+  def add_flavors(str)
+    @flavors << str
+  end
+</pre></code>
+</p>
+
+<p>
+  Now lets make the core method, make_drink, that asks you for your soda choice and your choice of flavors. It will then return the ingredients and give you a name for the delicious drink.
+</p>
+
+<p>
+  First we have to ask the user what soday they want, and print them a list of possible sodas. Then we have to save this soda as a variable that we can use later for the ingredients and the drink name.
+  <pre><code>
+  def make_drink
+    puts "What soda do you want to drink? Here are your options:"
+    @sodas.each { |soda| puts soda }
+    soda_choice =  gets.chomp
+    ingredients = [soda_choice]
+  </pre></code>
+</p>
+
+<p>
+  Now we need to do the same for flavors. We are also going to add the flavor to our ingredients array. However, when we are creating the drink_name, we don't want create a drink named "No Flavors Fepsi." If the user chooses "No flavors," we have to make sure that it does not get pushed to the ingredients array.
+  <pre><code>
+    puts "Do you want to add any flavors? Here are your options:"
+    @flavors.each { |flavor| puts flavor }
+    flavor_choice = gets.chomp
+    unless flavor_choice == "No flavors"
+      ingredients << flavor_choice
+    end
+  </pre></code>
+</p>
+
+<p>
+  Now we complete the order. We need to make a drink name out of our ingredients, and include the ingredients as we give the user the drink. The challenge is that we need different ratios of syrup if we don't include a flavor, so we need to puts different things depending on the length of ingredients.
+  <pre><code>
+    drink_name = ingredients.reverse.join(" ")
+    if ingredients.length == 2
+      puts "Here is 11oz of carbonated water, 3 oz of #{ingredients[0]} syrup, and 2oz of #{ingredients[1]}, also known as #{drink_name}. Enjoy!"
+    else
+      puts "Here is 11oz of carbonated water and 5 oz of #{ingredients[0]} syrup, also known as #{drink_name}. Enjoy!"
+    end
+  <pre><code>
+  end
+end
+<p>Now our machine is prepped and ready to pump out sodas to the masses! The full code is below. Please let me know if you have any questions or comments!
+</p>
+<hr>
+<p>
+  <pre><code>
+    class FancySodaMachine
+  def initialize()
+    @sodas = ["Foca Fola", "Fepsi", "Fr. Fepper", "Frite", "Froot Beer"]
+    @flavors = ["Red", "Orange", "Yellow", "Purple", "No flavors"]
+  end
+
+  attr_reader :sodas, :flavors
+
+  def add_sodas(str)
+    @sodas << str
+  end
+
+  def add_flavors(str)
+    @flavors << str
+  end
+
+  def make_drink
+    puts "What drink do you want to make? Here are your options:"
+    @sodas.each { |soda| puts soda }
+    soda_choice =  gets.chomp
+    ingredients = [soda_choice]
+
+    puts "Do you want to add any flavors? Here are your options:"
+    @flavors.each { |flavor| puts flavor }
+    flavor_choice = gets.chomp
+    unless flavor_choice == "No flavors"
+      ingredients << flavor_choice
+    end
+
+    drink_name = ingredients.reverse.join(" ")
+    if ingredients.length == 2
+      puts "Here is 11oz of carbonated water, 3 oz of #{ingredients[0]} syrup, and 2oz of #{ingredients[1]}, also known as #{drink_name}. Enjoy!"
+    else
+      puts "Here is 11oz of carbonated water and 5 oz of #{ingredients[0]} syrup, also known as #{drink_name}. Enjoy!"
+    end
+  end
+end
+</pre></code>
+</p>
+<hr>
+
+
+</body>
+</html>
+
