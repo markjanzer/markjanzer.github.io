@@ -90,56 +90,13 @@ Before we start with the big make_drink method to actually deliver our product, 
     else
       puts "Here is 11oz of carbonated water and 5 oz of #{ingredients[0]} syrup, also known as #{drink_name}. Enjoy!"
     end
-  <pre><code>
   end
 end
-<p>Now our machine is prepped and ready to pump out sodas to the masses! The full code is below. Please let me know if you have any questions or comments!
+  </pre></code>
+    </p>
+<p>Now our machine is prepped and ready to pump out sodas to the masses! Please let me know if you have any questions or comments!
 </p>
 <hr>
-<p>
-  <pre><code>
-    class FancySodaMachine
-  def initialize()
-    @sodas = ["Foca Fola", "Fepsi", "Fr. Fepper", "Frite", "Froot Beer"]
-    @flavors = ["Red", "Orange", "Yellow", "Purple", "No flavors"]
-  end
-
-  attr_reader :sodas, :flavors
-
-  def add_sodas(str)
-    @sodas << str
-  end
-
-  def add_flavors(str)
-    @flavors << str
-  end
-
-  def make_drink
-    puts "What drink do you want to make? Here are your options:"
-    @sodas.each { |soda| puts soda }
-    soda_choice =  gets.chomp
-    ingredients = [soda_choice]
-
-    puts "Do you want to add any flavors? Here are your options:"
-    @flavors.each { |flavor| puts flavor }
-    flavor_choice = gets.chomp
-    unless flavor_choice == "No flavors"
-      ingredients << flavor_choice
-    end
-
-    drink_name = ingredients.reverse.join(" ")
-    if ingredients.length == 2
-      puts "Here is 11oz of carbonated water, 3 oz of #{ingredients[0]} syrup, and 2oz of #{ingredients[1]}, also known as #{drink_name}. Enjoy!"
-    else
-      puts "Here is 11oz of carbonated water and 5 oz of #{ingredients[0]} syrup, also known as #{drink_name}. Enjoy!"
-    end
-  end
-end
-</pre></code>
-</p>
-<hr>
-
-
 </body>
 </html>
 
