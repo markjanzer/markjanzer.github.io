@@ -46,13 +46,17 @@ body {
   width: 50em;
 }
 
+.bd-s { border: solid; }
+
 .bgc { color: #FFF5F5;}
 .c-black { color: black; }
+.m-1 { margin: 1em;}
 .m-a { margin: auto;}
 .m-s { margin: 2em; }
 .m-xs { margin: 0 1em; }
 .m-5fl { margin: 0 0 0 5em; }
 .m-l-l { margin-left: 25em; }
+.mt-xs { margin-top: .5em; }
 
 .d-i { display: inline; }
 .d-ib { display: inline-block; }
@@ -67,6 +71,7 @@ body {
 .l-3 { left: 3%;}
 
 .p-lr5 { padding: 0 5em;}
+.p-0 { padding: 0;}
 
 .pos-r { position: relative;}
 
@@ -76,6 +81,7 @@ body {
 .w-33 { width: 33%;}
 .w-30 { width: 30%;}
 .w-53 { width: 53%;}
+.w-75 { width: 75%;}
 
 
 
