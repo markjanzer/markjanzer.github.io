@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link type="text/css" rel="stylesheet" href="../stylesheets/normalize.css">
+    <link type="text/css" rel="stylesheet" href="../stylesheets/default.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <link type="text/css" rel="stylesheet" href="../stylesheets/blog.css">
+    <meta charset="utf-8">
+    <title>Mark Janzer</title>
+</head>
+<body class="bgc c-black">
+  <header>
+    <h1 class="fz:xxl ta-c ff-ss">Mark Janzer</h1>
+    <ul class="ta-c m-s p-0">
+      <li class="d-i fz-l p-lr5 fw-b"><a href="../index.html">Home</a></li>
+      <li class="d-i fz-l p-lr5 fw-b"><a href="index.html">Blog</a></li>
+      <li class="d-i fz-l p-lr5 fw-b"><a href="../bio.html">Bio</a></li>
+      <li class="d-i fz-l p-lr5 fw-b"><a href="../projects.html">Projects</a></li>
+    </ul>
+  </header>
+  <main class="m-25">
+  <a href="index.html"> Back To Blog </a>
+  <hr>
+  <h1>JavaScript's Compare Function</h1>
+  <h2>October 30th, 2015</h2>
+  <p>
+    I have been confused by JavaScript's sort function long enough. The array.sort() function takes an optional function as an argument in the parentheses, and I have seen this compare function put to great use. It is time to learn how to use this compare function!
+  </p>
+  <p>
+    By default, the sort function sorts elements in an array in ascending order by their unicode value. For now, we are going to deal with only numbers to make things more simple, otherwise things get tricky when comparing different types of objects with the compare function. Below are compare functions (for numbers) written to be the same as .sort(), the opposite, and to do nothing.
+    <pre><code>
+      var nums = [8,6,5,2,3,9,1];
+      nums.sort(function(a,b){
+        return 0;
+      });
+      console.log(nums); //=> [8,6,5,2,3,9,1];
+      // This does nothing.
+
+      nums.sort(function(a,b){
+        return a - b;
+      });
+      console.log(nums); //=> [1,2,3,5,6,8,9];
+      // This sorts in ascending order.
+
+      nums.sort(function(a,b){
+        return b - a;
+      });
+      console.log(nums); //=> [9,8,6,5,3,2,1];
+      // This sorts in descending order.
+    </code></pre>
+  </p>
+
+  <p>
+    This might not be how the inner workings of the compare callback function work, but here is what makes sense to me.
+  </p>
+  <p>
+    This function takes two arguments, a and b. a represents the current element, and b represents the element it is being compared to. The function is run, and a will move or not move depending on what the function returns. If the function returns a positive number, a will be moved an index after b. If a negative number is returned, a will move an  index before b. If zero is returned, a will not change it's location. Now how JavaScript chooses which elements to compare to what is beyond me. There are different algorithms for sorting, some of which can be found <a href="http://khan4019.github.io/front-end-Interview-Questions/sort.html">here.</a>
+  </p>
+
+  <p>
+    Now let's try something cool. Lets say that three kids are trying to find out who knows the longest word. They have expansive vocabularies, but aren't that great at counting, so they put their words in their own objects and hope that their friendly programmer can figure out the answer. Let's give it a shot.
+    <pre><code>
+     var students = [
+     {name: "Jack", crush: "Cindy", largestWord: "gasconading"},
+     {name: "Cindy", crush: "Jessie", largestWord: "sesquipedalian"},
+     {name: "Jessie", crush: "Johnny Depp", largestWord: "osculator"}
+     ];
+
+     // Now to sort the students in Descending order of longest word.
+     students.sort(function(a,b){
+      return b.largestWord.length - a.largestWord.length;
+     })
+
+     console.log(students[0].name, students[1].name, students[2].name);
+     //=> Cindy Jack Jessie
+   </pre></code>
+ </p>
+
+ <p>
+  Hope this helps! Let me know if you have any questions or comments, and sort away!
+</p>
+
+</body>
+</html>
