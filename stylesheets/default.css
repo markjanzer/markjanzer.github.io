@@ -31,19 +31,17 @@ body {
   color: ;
 }
 
+.blog-picture {
+  position: relative;
+  left: 40em;
+  bottom: 30em;
+  width: 50em;
+}
 
 .blog-article {
   position: relative;
   left: 25em;
   margin-bottom: 1.5em;
-
-}
-
-.blog-picture {
-  position: relative;
-  left: 40em;
-  bottom: 10em;
-  width: 50em;
 }
 
 .bd-s { border: solid; }
@@ -57,6 +55,7 @@ body {
 .m-5fl { margin: 0 0 0 5em; }
 .m-l-l { margin-left: 25em; }
 .mt-xs { margin-top: .5em; }
+.mt-s { margin-top: 1.5em;}
 
 .d-i { display: inline; }
 .d-ib { display: inline-block; }
