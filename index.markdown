@@ -7,5 +7,3 @@ layout: home
 
 I'm a software engineer living in San Francisco.
 This is my personal site. It's a work in progress :)
-
-
