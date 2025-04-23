@@ -1,0 +1,41 @@
+---
+layout: default
+title: Projects
+permalink: /projects/
+---
+
+<h1>Projects</h1>
+
+<div class="projects-container">
+  {% for project in site.projects %}
+    <div class="project-card">
+      <div class="project-thumbnail">
+        <img src="{{ project.thumbnail }}" alt="{{ project.title }}">
+      </div>
+      <div class="project-content">
+        <div class="project-header">
+          {% if project.archive %}
+            <span class="archive-badge">Archived</span>
+          {% endif %}
+          <h3>{{ project.title }}</h3>
+        </div>
+        <p>{{ project.excerpt }}</p>
+        <div class="project-technologies">
+          {% for tech in project.technologies %}
+            <span class="tech-tag">{{ tech }}</span>
+          {% endfor %}
+        </div>
+        <div class="project-links">
+          <a href="{{ project.github_url }}" class="project-link" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          {% if project.live_url %}
+            <a href="{{ project.live_url }}" class="project-link" target="_blank">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
