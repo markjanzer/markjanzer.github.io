@@ -1,7 +1,7 @@
 ---
 title: "LoL Pro Elo"
 thumbnail: "/assets/images/projects/project1/thumbnail.jpg"
-technologies: ["Rails", "React", "PostgreSQL", "Chart.js", "Sidekiq"]
+technologies: ["Rails", "React", "PostgreSQL", "Chart.js", "Sidekiq", "TailwindCSS"]
 github_url: ""
 live_url: "https://www.lolproelo.com/"
 archive: false
