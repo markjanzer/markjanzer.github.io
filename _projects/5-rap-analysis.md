@@ -2,7 +2,7 @@
 title: "Rap Analysis"
 thumbnail: "/assets/images/projects/project1/thumbnail.jpg"
 technologies: ["Rails", "JQuery"]
-github_url: ""
+github_url: "https://github.com/markjanzer/rap-analysis"
 live_url: ""
 archive: true
 ---
