@@ -27,14 +27,10 @@ permalink: /projects/
         </div>
         <div class="project-links">
           {% if project.github_url.size > 0 %}
-            <a href="{{ project.github_url }}" class="project-link" target="_blank">
-              <i class="fab fa-github"></i> GitHub
-            </a>
+            <a href="{{ project.github_url }}">GitHub</a>
           {% endif %}
           {% if project.live_url.size > 0 %}
-            <a href="{{ project.live_url }}" class="project-link" target="_blank">
-              <i class="fas fa-external-link-alt"></i> Site
-            </a>
+            <a href="{{ project.live_url }}">Website</a>
           {% endif %}
         </div>
       </div>

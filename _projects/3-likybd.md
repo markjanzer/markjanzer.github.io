@@ -3,7 +3,7 @@ title: "The Linear Isomoprphic Keyboard"
 thumbnail: "/assets/images/projects/project1/thumbnail.jpg"
 technologies: ["Rails", "Turbo", "Stimulus", "PostgreSQL", "TailwindCSS"]
 github_url: ""
-live_url: "https://https://likybd.com/"
+live_url: "https://www.likybd.com/"
 archive: false
 ---
 

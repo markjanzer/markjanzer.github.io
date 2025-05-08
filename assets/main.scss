@@ -10,10 +10,11 @@
   padding: 0 1rem;
 
   .content-container {
-    background-color: #efefef;
-    border-radius: 12px;
-    padding: 2rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
 }
 
@@ -77,33 +78,17 @@
 }
 
 .tech-tag {
-  background: #f0f0f0;
+  background: #2b006a;
   padding: 0.25rem 0.75rem;
   border-radius: 12px;
   font-size: 0.875rem;
-  color: #333;
+  color: #fff;
 }
 
 .project-links {
   display: flex;
   gap: 1rem;
   margin-top: 1rem;
-}
-
-.project-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  background: #f0f0f0;
-  border-radius: 4px;
-  color: #333;
-  text-decoration: none;
-  transition: background-color 0.2s;
-}
-
-.project-link:hover {
-  background: #e0e0e0;
 }
 
 @media (max-width: 768px) {
