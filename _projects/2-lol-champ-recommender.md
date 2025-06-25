@@ -2,7 +2,7 @@
 title: "LoL Champ Recommender"
 thumbnail: "/assets/images/projects/project1/thumbnail.jpg"
 technologies: ["Rails", "React", "PostgreSQL", "Chart.js", "Sidekiq", "TailwindCSS"]
-github_url: ""
+github_url: "https://github.com/markjanzer/lol-champ-recommender"
 live_url: ""
 archive: false
 ---
