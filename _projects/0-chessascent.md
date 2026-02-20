@@ -1,7 +1,7 @@
 ---
 title: "Chess Ascent"
 thumbnail: "/assets/images/projects/chessascent/thumbnail.jpg"
-technologies: ["Vue 3", "TypeScript", "Fastify", "tRPC", "PostgreSQL", "Prisma", "Clerk", "FSRS", "Glicko-2", "Tailwind CSS"]
+technologies: ["Vue 3", "TypeScript", "Fastify", "tRPC", "PostgreSQL", "Prisma", "better-auth", "FSRS", "Glicko-2", "Tailwind CSS"]
 github_url: ""
 live_url: "https://chessascent.com"
 archive: false
