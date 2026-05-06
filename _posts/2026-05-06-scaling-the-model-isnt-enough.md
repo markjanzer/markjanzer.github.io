@@ -56,4 +56,4 @@ My bet is that we end up somewhere closer to Stockfish than to the DeepMind tran
 
 ---
 
-P.S. I learned all of this on hone — an open-source learning app I'm building, where you bring your own model and it builds a curriculum, tutors you through it, and tests your understanding. Coming soon at hone.study.
+P.S. I learned all of this on hone — a learning app I'm building, where you bring your own model and it builds a curriculum, tutors you through it, and tests your understanding. Coming soon at hone.study.
